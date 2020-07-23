@@ -1,0 +1,8 @@
+{
+  "type": "woodcutter:woodcutter",
+  "ingredient": {
+    "item": "minecraft:stripped_spruce_log"
+  },
+  "result": "minecraft:stripped_spruce_wood",
+  "count": 1
+}

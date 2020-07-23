@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "woodcutter:jungle_planks_from_jungle_logs_tag"
+    ]
+  },
+  "criteria": {
+    "has_jungle_planks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "minecraft:jungle_logs"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "woodcutter:jungle_planks_from_jungle_logs_tag"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_jungle_planks",
+      "has_the_recipe"
+    ]
+  ]
+}

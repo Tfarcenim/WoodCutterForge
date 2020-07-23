@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "woodcutter:jungle_stairs_from_jungle_planks"
+    ]
+  },
+  "criteria": {
+    "has_jungle_stairs": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:jungle_planks"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "woodcutter:jungle_stairs_from_jungle_planks"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_jungle_stairs",
+      "has_the_recipe"
+    ]
+  ]
+}

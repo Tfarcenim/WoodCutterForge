@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "woodcutter:spruce_fence_from_spruce_planks"
+    ]
+  },
+  "criteria": {
+    "has_spruce_fence": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:spruce_planks"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "woodcutter:spruce_fence_from_spruce_planks"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_spruce_fence",
+      "has_the_recipe"
+    ]
+  ]
+}

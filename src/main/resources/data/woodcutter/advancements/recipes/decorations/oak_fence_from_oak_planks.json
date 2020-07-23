@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "woodcutter:oak_fence_from_oak_planks"
+    ]
+  },
+  "criteria": {
+    "has_oak_fence": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:oak_planks"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "woodcutter:oak_fence_from_oak_planks"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_oak_fence",
+      "has_the_recipe"
+    ]
+  ]
+}

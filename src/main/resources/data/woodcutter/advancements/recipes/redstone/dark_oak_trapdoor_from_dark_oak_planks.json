@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "woodcutter:dark_oak_trapdoor_from_dark_oak_planks"
+    ]
+  },
+  "criteria": {
+    "has_dark_oak_trapdoor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:dark_oak_planks"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "woodcutter:dark_oak_trapdoor_from_dark_oak_planks"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_dark_oak_trapdoor",
+      "has_the_recipe"
+    ]
+  ]
+}

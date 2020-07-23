@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "woodcutter:warped_hyphae_from_warped_stem"
+    ]
+  },
+  "criteria": {
+    "has_warped_hyphae": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:warped_stem"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "woodcutter:warped_hyphae_from_warped_stem"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_warped_hyphae",
+      "has_the_recipe"
+    ]
+  ]
+}

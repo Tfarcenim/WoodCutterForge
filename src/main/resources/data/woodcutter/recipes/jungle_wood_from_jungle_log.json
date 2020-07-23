@@ -1,0 +1,8 @@
+{
+  "type": "woodcutter:woodcutter",
+  "ingredient": {
+    "item": "minecraft:jungle_log"
+  },
+  "result": "minecraft:jungle_wood",
+  "count": 1
+}

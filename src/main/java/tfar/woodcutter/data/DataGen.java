@@ -1,0 +1,15 @@
+package tfar.woodcutter.data;
+
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
+
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+public class DataGen {
+	@SubscribeEvent
+	public static void gen(GatherDataEvent e) {
+		if (e.includeServer()) {
+			e.getGenerator().addProvider(new WoodCutterRecipeProvider(e.getGenerator()));
+		}
+	}
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/stonecutter",
+  "textures": {
+    "top": "woodcutter:block/woodcutter_top",
+    "side": "woodcutter:block/woodcutter_side"
+  }
+}

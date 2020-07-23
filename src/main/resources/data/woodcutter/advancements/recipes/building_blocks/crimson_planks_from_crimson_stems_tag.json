@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "woodcutter:crimson_planks_from_crimson_stems_tag"
+    ]
+  },
+  "criteria": {
+    "has_crimson_planks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "minecraft:crimson_stems"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "woodcutter:crimson_planks_from_crimson_stems_tag"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_crimson_planks",
+      "has_the_recipe"
+    ]
+  ]
+}

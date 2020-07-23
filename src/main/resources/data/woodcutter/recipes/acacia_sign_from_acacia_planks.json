@@ -1,0 +1,8 @@
+{
+  "type": "woodcutter:woodcutter",
+  "ingredient": {
+    "item": "minecraft:acacia_planks"
+  },
+  "result": "minecraft:acacia_sign",
+  "count": 1
+}
