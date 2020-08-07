@@ -1,5 +1,5 @@
 {
-  "type": "woodcutter:woodcutter",
+  "type": "woodcutter:woodcutting",
   "ingredient": {
     "item": "minecraft:oak_log"
   },

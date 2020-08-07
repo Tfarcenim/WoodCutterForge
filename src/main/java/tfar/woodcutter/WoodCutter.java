@@ -60,7 +60,7 @@ public class WoodCutter {
 	}
 
 	private void recipe(RegistryEvent.Register<IRecipeSerializer<?>> e) {
-		register(WOODCUTTING = new WoodcuttingRecipe.Serializer2<>(WoodcuttingRecipe::new),MODID,e.getRegistry());
+		register(WOODCUTTING = new WoodcuttingRecipe.Serializer2<>(WoodcuttingRecipe::new),"woodcutting",e.getRegistry());
 	}
 
 		private static <T extends IForgeRegistryEntry<T>> void register(T obj, String name, IForgeRegistry<T> registry) {
