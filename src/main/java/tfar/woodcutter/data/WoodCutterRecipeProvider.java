@@ -28,8 +28,8 @@ public class WoodCutterRecipeProvider extends RecipeProvider {
 		tag_to_multiple_items(ItemTags.JUNGLE_LOGS,Blocks.JUNGLE_PLANKS,6,consumer);
 		tag_to_multiple_items(ItemTags.ACACIA_LOGS,Blocks.ACACIA_PLANKS,6,consumer);
 		tag_to_multiple_items(ItemTags.DARK_OAK_LOGS,Blocks.DARK_OAK_PLANKS,6,consumer);
-		tag_to_multiple_items(ItemTags.field_232913_w_,Blocks.CRIMSON_PLANKS,6,consumer);
-		tag_to_multiple_items(ItemTags.field_232914_x_,Blocks.WARPED_PLANKS,6,consumer);
+		tag_to_multiple_items(ItemTags.CRIMSON_STEMS,Blocks.CRIMSON_PLANKS,6,consumer);
+		tag_to_multiple_items(ItemTags.WARPED_STEMS,Blocks.WARPED_PLANKS,6,consumer);
 
 		item_to_item(Blocks.OAK_LOG,Blocks.STRIPPED_OAK_LOG,consumer);
 		item_to_item(Blocks.SPRUCE_LOG,Blocks.STRIPPED_SPRUCE_LOG,consumer);

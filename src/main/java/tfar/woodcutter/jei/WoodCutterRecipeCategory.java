@@ -7,20 +7,15 @@ import mezz.jei.api.gui.ingredient.IGuiItemStackGroup;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.helpers.IModIdHelper;
 import mezz.jei.api.ingredients.IIngredients;
-import mezz.jei.api.recipe.category.extensions.IExtendableRecipeCategory;
-import mezz.jei.api.recipe.category.extensions.vanilla.crafting.ICraftingCategoryExtension;
+import mezz.jei.api.recipe.category.IRecipeCategory;
 import mezz.jei.config.Constants;
-import mezz.jei.recipes.ExtendableRecipeCategoryHelper;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.ResourceLocation;
 import tfar.woodcutter.WoodCutter;
 import tfar.woodcutter.WoodcuttingRecipe;
 
-import java.util.function.Function;
-
-public class WoodCutterRecipeCategory implements IExtendableRecipeCategory<WoodcuttingRecipe, ICraftingCategoryExtension> {
+public class WoodCutterRecipeCategory implements IRecipeCategory<WoodcuttingRecipe> {
 	private static final int inputSlot = 0;
 	private static final int outputSlot = 1;
 	public static final int width = 82;
@@ -28,19 +23,12 @@ public class WoodCutterRecipeCategory implements IExtendableRecipeCategory<Woodc
 	private final IDrawable background;
 	private final IDrawable icon;
 	private final String localizedName;
-	private final IModIdHelper modIdHelper;
-	private final ExtendableRecipeCategoryHelper<IRecipe<?>, ICraftingCategoryExtension> extendableHelper = new ExtendableRecipeCategoryHelper(WoodcuttingRecipe.class);
 
-	public WoodCutterRecipeCategory(IGuiHelper guiHelper, IModIdHelper modIdHelper) {
-		this.modIdHelper = modIdHelper;
+	public WoodCutterRecipeCategory(IGuiHelper guiHelper) {
 		ResourceLocation location = Constants.RECIPE_GUI_VANILLA;
-		this.background = guiHelper.createDrawable(location, 0, 220, 82, 34);
+		this.background = guiHelper.createDrawable(location, 0, 220, width, height);
 		this.icon = guiHelper.createDrawableIngredient(new ItemStack(WoodCutter.woodcutter));
 		this.localizedName = I18n.format("gui.jei.category.woodCutter");
-	}
-
-	public <R extends WoodcuttingRecipe> void addCategoryExtension(Class<? extends R> recipeClass, Function<R, ? extends ICraftingCategoryExtension> extensionFactory) {
-		this.extendableHelper.addRecipeExtensionFactory(recipeClass, extensionFactory);
 	}
 
 	public ResourceLocation getUid() {

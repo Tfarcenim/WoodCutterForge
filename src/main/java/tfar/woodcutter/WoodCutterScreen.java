@@ -23,15 +23,15 @@ public class WoodCutterScreen extends ContainerScreen<WoodCutterContainer> {
 	public WoodCutterScreen(WoodCutterContainer handler, PlayerInventory inventory, ITextComponent title) {
 		super(handler, inventory, title);
 		handler.setContentsChangedListener(this::onInventoryChange);
-		--this.field_238743_q_;
+		--this.titleY;
 	}
 
 	public void render(MatrixStack matrices, int mouseX, int mouseY, float delta) {
 		super.render(matrices, mouseX, mouseY, delta);
-		this.func_230459_a_(matrices, mouseX, mouseY);
+		this.renderHoveredTooltip(matrices, mouseX, mouseY);
 	}
 
-	protected void func_230450_a_(MatrixStack matrices, float delta, int mouseX, int mouseY) {
+	protected void drawGuiContainerBackgroundLayer(MatrixStack matrices, float delta, int mouseX, int mouseY) {
 		this.renderBackground(matrices);
 		RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
 		this.minecraft.getTextureManager().bindTexture(TEXTURE);
@@ -47,8 +47,8 @@ public class WoodCutterScreen extends ContainerScreen<WoodCutterContainer> {
 		this.renderRecipeIcons(l, m, n);
 	}
 
-	protected void func_230459_a_(MatrixStack matrices, int x, int y) {
-		super.func_230459_a_(matrices, x, y);
+	protected void drawGuiContainerForegroundLayer(MatrixStack matrices, int x, int y) {
+		super.drawGuiContainerForegroundLayer(matrices, x, y);
 		if (this.canCraft) {
 			int i = this.guiLeft + 52;
 			int j = this.guiTop + 14;

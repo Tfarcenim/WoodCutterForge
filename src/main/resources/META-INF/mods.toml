@@ -10,6 +10,7 @@ loaderVersion="[28,)" #mandatory (28 is current forge version)
 # A URL to refer people to when problems occur with this mod
 #issueTrackerURL="http://my.issue.tracker/" #optional
 # A list of mods - how many allowed here is determined by the individual mod loader
+license="Unlicense"
 [[mods]] #mandatory
 # The modid of the mod
 modId="woodcutter" #mandatory
@@ -29,5 +30,5 @@ displayName="Wood Cutter" #mandatory
 authors="Tfarcenim" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-Oh, right, the woodcutter. The woodcutter for Minecraft. The woodcutter created specifically for Minecraft. Minecraft woodcutter.
+Oh, right, the Minecraft woodcutter. The woodcutter for Minecraft. The woodcutter created specifically for Minecraft. Minecraft woodcutter.
 '''

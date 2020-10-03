@@ -1,15 +1,12 @@
 package tfar.woodcutter.jei;
 
-import mezz.jei.Internal;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
-import mezz.jei.api.constants.VanillaRecipeCategoryUid;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.helpers.IJeiHelpers;
 import mezz.jei.api.helpers.IModIdHelper;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;
-import mezz.jei.gui.textures.Textures;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.ResourceLocation;
 import tfar.woodcutter.WoodCutter;
@@ -28,9 +25,8 @@ public class ModPlugin implements IModPlugin {
 	public void registerCategories(IRecipeCategoryRegistration registration) {
 		IJeiHelpers jeiHelpers = registration.getJeiHelpers();
 		IGuiHelper guiHelper = jeiHelpers.getGuiHelper();
-		IModIdHelper modIdHelper = jeiHelpers.getModIdHelper();
 
-		registration.addRecipeCategories(new WoodCutterRecipeCategory(guiHelper,modIdHelper));
+		registration.addRecipeCategories(new WoodCutterRecipeCategory(guiHelper));
 	}
 
 	public void registerRecipes(IRecipeRegistration registration) {
